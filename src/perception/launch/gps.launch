@@ -1,0 +1,12 @@
+<launch>
+    <node name="gps_imu_pub" pkg="perception" type="gps_imu_pub.py" output="screen">
+        <!-- 设置串口参数 -->
+        <param name="serial_port" value="/dev/ttyUSB0" />
+        <!-- 设置波特率参数 -->
+        <param name="baud_rate" value="115200" />
+    </node>
+
+    
+</launch>
+
+

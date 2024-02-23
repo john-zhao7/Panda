@@ -1,0 +1,2 @@
+car_interfaces:control:decision:faultdiagnosis:hmi:jobmanagement:lidar:perception:planning:self_start:show_rviz:slam:wirecontrol
+-DCATKIN_DEVEL_PREFIX=/home/nvidia/las/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/las/install -G Unix Makefiles

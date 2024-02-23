@@ -1,0 +1,23 @@
+
+uint8 id
+uint8 type
+float32 exist_con
+float32 vel_x
+float32 vel_y
+float32 vel_z
+float32 dis_x
+float32 dis_y
+float32 dis_z
+float32 acc_x
+float32 acc_y
+float32 acc_z
+float32 object_x
+float32 object_y
+float32 object_z
+float32 core_x
+float32 core_y
+float32 core_z
+uint8 attention_type
+uint8   motion_state
+float32 age
+uint8 tra_id

@@ -1,0 +1,11 @@
+# generated from genmsg/cmake/pkg-genmsg.context.in
+
+messages_str = "/home/nvidia/las/src/car_interfaces/msg/GlobalPathPlanningInterface.msg;/home/nvidia/las/src/car_interfaces/msg/CameraObstacleInterface.msg;/home/nvidia/las/src/car_interfaces/msg/CameraOriInterface.msg;/home/nvidia/las/src/car_interfaces/msg/CanStateInterface.msg;/home/nvidia/las/src/car_interfaces/msg/CarDecisionInterface.msg;/home/nvidia/las/src/car_interfaces/msg/CarOriInterface.msg;/home/nvidia/las/src/car_interfaces/msg/FaultDiagnosisInterface.msg;/home/nvidia/las/src/car_interfaces/msg/FusionInterface.msg;/home/nvidia/las/src/car_interfaces/msg/GpsImuInterface.msg;/home/nvidia/las/src/car_interfaces/msg/HmiStartEndPointInterface.msg;/home/nvidia/las/src/car_interfaces/msg/LaneRecognitionInterface.msg;/home/nvidia/las/src/car_interfaces/msg/LocalPathPlanningInterface.msg;/home/nvidia/las/src/car_interfaces/msg/NetStartEndPointInterface.msg;/home/nvidia/las/src/car_interfaces/msg/PathSpeedCtrlInterface.msg;/home/nvidia/las/src/car_interfaces/msg/RadarObstacleInterface.msg;/home/nvidia/las/src/car_interfaces/msg/RadarStateInterface.msg;/home/nvidia/las/src/car_interfaces/msg/VehOperatingData.msg;/home/nvidia/las/src/car_interfaces/msg/VehOperatingStateInterface.msg;/home/nvidia/las/src/car_interfaces/msg/CameraStateInterface.msg;/home/nvidia/las/src/car_interfaces/msg/SlamInterface.msg;/home/nvidia/las/src/car_interfaces/msg/LidarOriInterface.msg;/home/nvidia/las/src/car_interfaces/msg/FusionRequisiteInterface.msg;/home/nvidia/las/src/car_interfaces/msg/FusionAddInterface.msg;/home/nvidia/las/src/car_interfaces/msg/GpsImuAddInterface.msg;/home/nvidia/las/src/car_interfaces/msg/GpsImuRequisiteInterface.msg;/home/nvidia/las/src/car_interfaces/msg/CarActionInterface.msg"
+services_str = ""
+pkg_name = "car_interfaces"
+dependencies_str = "std_msgs;sensor_msgs;geometry_msgs"
+langs = "gencpp;geneus;genlisp;gennodejs;genpy"
+dep_include_paths_str = "car_interfaces;/home/nvidia/las/src/car_interfaces/msg;std_msgs;/opt/ros/noetic/share/std_msgs/cmake/../msg;sensor_msgs;/opt/ros/noetic/share/sensor_msgs/cmake/../msg;geometry_msgs;/opt/ros/noetic/share/geometry_msgs/cmake/../msg"
+PYTHON_EXECUTABLE = "/usr/bin/python3"
+package_has_static_sources = '' == 'TRUE'
+genmsg_check_deps_script = "/opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py"

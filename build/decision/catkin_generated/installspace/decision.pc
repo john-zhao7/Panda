@@ -1,0 +1,8 @@
+prefix=/home/nvidia/las/install
+
+Name: decision
+Description: Description of decision
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

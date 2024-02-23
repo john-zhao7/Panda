@@ -1,0 +1,459 @@
+; Auto-generated. Do not edit!
+
+
+(cl:in-package hmi-msg)
+
+
+;//! \htmlinclude PathSpeedCtrlInterface.msg.html
+
+(cl:defclass <PathSpeedCtrlInterface> (roslisp-msg-protocol:ros-message)
+  ((timestamp
+    :reader timestamp
+    :initarg :timestamp
+    :type cl:float
+    :initform 0.0)
+   (Target_velocity
+    :reader Target_velocity
+    :initarg :Target_velocity
+    :type cl:float
+    :initform 0.0)
+   (Target_steering_angle
+    :reader Target_steering_angle
+    :initarg :Target_steering_angle
+    :type cl:float
+    :initform 0.0)
+   (Target_gear
+    :reader Target_gear
+    :initarg :Target_gear
+    :type cl:fixnum
+    :initform 0)
+   (Target_primary_gear
+    :reader Target_primary_gear
+    :initarg :Target_primary_gear
+    :type cl:fixnum
+    :initform 0)
+   (Target_EngineSpeedLevel
+    :reader Target_EngineSpeedLevel
+    :initarg :Target_EngineSpeedLevel
+    :type cl:fixnum
+    :initform 0)
+   (Target_speedlever_percentage
+    :reader Target_speedlever_percentage
+    :initarg :Target_speedlever_percentage
+    :type cl:float
+    :initform 0.0)
+   (Target_Torque_Nm
+    :reader Target_Torque_Nm
+    :initarg :Target_Torque_Nm
+    :type cl:float
+    :initform 0.0)
+   (Target_braking_percentage
+    :reader Target_braking_percentage
+    :initarg :Target_braking_percentage
+    :type cl:fixnum
+    :initform 0)
+   (NearestPoint_Car2Path
+    :reader NearestPoint_Car2Path
+    :initarg :NearestPoint_Car2Path
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0))
+   (Cotton_Bin_Ctrl
+    :reader Cotton_Bin_Ctrl
+    :initarg :Cotton_Bin_Ctrl
+    :type cl:fixnum
+    :initform 0)
+   (CTE
+    :reader CTE
+    :initarg :CTE
+    :type cl:float
+    :initform 0.0)
+   (dHead
+    :reader dHead
+    :initarg :dHead
+    :type cl:float
+    :initform 0.0)
+   (brake_enable
+    :reader brake_enable
+    :initarg :brake_enable
+    :type cl:float
+    :initform 0.0)
+   (value_brake
+    :reader value_brake
+    :initarg :value_brake
+    :type cl:float
+    :initform 0.0)
+   (flag
+    :reader flag
+    :initarg :flag
+    :type (cl:vector cl:float)
+   :initform (cl:make-array 0 :element-type 'cl:float :initial-element 0.0))
+   (raw_control
+    :reader raw_control
+    :initarg :raw_control
+    :type cl:float
+    :initform 0.0)
+   (kappa
+    :reader kappa
+    :initarg :kappa
+    :type cl:float
+    :initform 0.0))
+)
+
+(cl:defclass PathSpeedCtrlInterface (<PathSpeedCtrlInterface>)
+  ())
+
+(cl:defmethod cl:initialize-instance :after ((m <PathSpeedCtrlInterface>) cl:&rest args)
+  (cl:declare (cl:ignorable args))
+  (cl:unless (cl:typep m 'PathSpeedCtrlInterface)
+    (roslisp-msg-protocol:msg-deprecation-warning "using old message class name hmi-msg:<PathSpeedCtrlInterface> is deprecated: use hmi-msg:PathSpeedCtrlInterface instead.")))
+
+(cl:ensure-generic-function 'timestamp-val :lambda-list '(m))
+(cl:defmethod timestamp-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:timestamp-val is deprecated.  Use hmi-msg:timestamp instead.")
+  (timestamp m))
+
+(cl:ensure-generic-function 'Target_velocity-val :lambda-list '(m))
+(cl:defmethod Target_velocity-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Target_velocity-val is deprecated.  Use hmi-msg:Target_velocity instead.")
+  (Target_velocity m))
+
+(cl:ensure-generic-function 'Target_steering_angle-val :lambda-list '(m))
+(cl:defmethod Target_steering_angle-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Target_steering_angle-val is deprecated.  Use hmi-msg:Target_steering_angle instead.")
+  (Target_steering_angle m))
+
+(cl:ensure-generic-function 'Target_gear-val :lambda-list '(m))
+(cl:defmethod Target_gear-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Target_gear-val is deprecated.  Use hmi-msg:Target_gear instead.")
+  (Target_gear m))
+
+(cl:ensure-generic-function 'Target_primary_gear-val :lambda-list '(m))
+(cl:defmethod Target_primary_gear-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Target_primary_gear-val is deprecated.  Use hmi-msg:Target_primary_gear instead.")
+  (Target_primary_gear m))
+
+(cl:ensure-generic-function 'Target_EngineSpeedLevel-val :lambda-list '(m))
+(cl:defmethod Target_EngineSpeedLevel-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Target_EngineSpeedLevel-val is deprecated.  Use hmi-msg:Target_EngineSpeedLevel instead.")
+  (Target_EngineSpeedLevel m))
+
+(cl:ensure-generic-function 'Target_speedlever_percentage-val :lambda-list '(m))
+(cl:defmethod Target_speedlever_percentage-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Target_speedlever_percentage-val is deprecated.  Use hmi-msg:Target_speedlever_percentage instead.")
+  (Target_speedlever_percentage m))
+
+(cl:ensure-generic-function 'Target_Torque_Nm-val :lambda-list '(m))
+(cl:defmethod Target_Torque_Nm-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Target_Torque_Nm-val is deprecated.  Use hmi-msg:Target_Torque_Nm instead.")
+  (Target_Torque_Nm m))
+
+(cl:ensure-generic-function 'Target_braking_percentage-val :lambda-list '(m))
+(cl:defmethod Target_braking_percentage-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Target_braking_percentage-val is deprecated.  Use hmi-msg:Target_braking_percentage instead.")
+  (Target_braking_percentage m))
+
+(cl:ensure-generic-function 'NearestPoint_Car2Path-val :lambda-list '(m))
+(cl:defmethod NearestPoint_Car2Path-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:NearestPoint_Car2Path-val is deprecated.  Use hmi-msg:NearestPoint_Car2Path instead.")
+  (NearestPoint_Car2Path m))
+
+(cl:ensure-generic-function 'Cotton_Bin_Ctrl-val :lambda-list '(m))
+(cl:defmethod Cotton_Bin_Ctrl-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:Cotton_Bin_Ctrl-val is deprecated.  Use hmi-msg:Cotton_Bin_Ctrl instead.")
+  (Cotton_Bin_Ctrl m))
+
+(cl:ensure-generic-function 'CTE-val :lambda-list '(m))
+(cl:defmethod CTE-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:CTE-val is deprecated.  Use hmi-msg:CTE instead.")
+  (CTE m))
+
+(cl:ensure-generic-function 'dHead-val :lambda-list '(m))
+(cl:defmethod dHead-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:dHead-val is deprecated.  Use hmi-msg:dHead instead.")
+  (dHead m))
+
+(cl:ensure-generic-function 'brake_enable-val :lambda-list '(m))
+(cl:defmethod brake_enable-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:brake_enable-val is deprecated.  Use hmi-msg:brake_enable instead.")
+  (brake_enable m))
+
+(cl:ensure-generic-function 'value_brake-val :lambda-list '(m))
+(cl:defmethod value_brake-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:value_brake-val is deprecated.  Use hmi-msg:value_brake instead.")
+  (value_brake m))
+
+(cl:ensure-generic-function 'flag-val :lambda-list '(m))
+(cl:defmethod flag-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:flag-val is deprecated.  Use hmi-msg:flag instead.")
+  (flag m))
+
+(cl:ensure-generic-function 'raw_control-val :lambda-list '(m))
+(cl:defmethod raw_control-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:raw_control-val is deprecated.  Use hmi-msg:raw_control instead.")
+  (raw_control m))
+
+(cl:ensure-generic-function 'kappa-val :lambda-list '(m))
+(cl:defmethod kappa-val ((m <PathSpeedCtrlInterface>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader hmi-msg:kappa-val is deprecated.  Use hmi-msg:kappa instead.")
+  (kappa m))
+(cl:defmethod roslisp-msg-protocol:serialize ((msg <PathSpeedCtrlInterface>) ostream)
+  "Serializes a message object of type '<PathSpeedCtrlInterface>"
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'timestamp))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'Target_velocity))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'Target_steering_angle))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'Target_gear)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'Target_primary_gear)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'Target_EngineSpeedLevel)) ostream)
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'Target_speedlever_percentage))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'Target_Torque_Nm))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'Target_braking_percentage)) ostream)
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'NearestPoint_Car2Path))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-single-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)))
+   (cl:slot-value msg 'NearestPoint_Car2Path))
+  (cl:let* ((signed (cl:slot-value msg 'Cotton_Bin_Ctrl)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 256) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    )
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'CTE))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'dHead))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'brake_enable))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'value_brake))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((__ros_arr_len (cl:length (cl:slot-value msg 'flag))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) __ros_arr_len) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) __ros_arr_len) ostream))
+  (cl:map cl:nil #'(cl:lambda (ele) (cl:let ((bits (roslisp-utils:encode-single-float-bits ele)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)))
+   (cl:slot-value msg 'flag))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'raw_control))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'kappa))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+)
+(cl:defmethod roslisp-msg-protocol:deserialize ((msg <PathSpeedCtrlInterface>) istream)
+  "Deserializes a message object of type '<PathSpeedCtrlInterface>"
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'timestamp) (roslisp-utils:decode-double-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'Target_velocity) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'Target_steering_angle) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'Target_gear)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'Target_primary_gear)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'Target_EngineSpeedLevel)) (cl:read-byte istream))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'Target_speedlever_percentage) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'Target_Torque_Nm) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'Target_braking_percentage)) (cl:read-byte istream))
+  (cl:let ((__ros_arr_len 0))
+    (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
+  (cl:setf (cl:slot-value msg 'NearestPoint_Car2Path) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'NearestPoint_Car2Path)))
+    (cl:dotimes (i __ros_arr_len)
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-single-float-bits bits))))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'Cotton_Bin_Ctrl) (cl:if (cl:< unsigned 128) unsigned (cl:- unsigned 256))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'CTE) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'dHead) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'brake_enable) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'value_brake) (roslisp-utils:decode-single-float-bits bits)))
+  (cl:let ((__ros_arr_len 0))
+    (cl:setf (cl:ldb (cl:byte 8 0) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 16) __ros_arr_len) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 24) __ros_arr_len) (cl:read-byte istream))
+  (cl:setf (cl:slot-value msg 'flag) (cl:make-array __ros_arr_len))
+  (cl:let ((vals (cl:slot-value msg 'flag)))
+    (cl:dotimes (i __ros_arr_len)
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:aref vals i) (roslisp-utils:decode-single-float-bits bits))))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'raw_control) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'kappa) (roslisp-utils:decode-single-float-bits bits)))
+  msg
+)
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<PathSpeedCtrlInterface>)))
+  "Returns string type for a message object of type '<PathSpeedCtrlInterface>"
+  "hmi/PathSpeedCtrlInterface")
+(cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql 'PathSpeedCtrlInterface)))
+  "Returns string type for a message object of type 'PathSpeedCtrlInterface"
+  "hmi/PathSpeedCtrlInterface")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<PathSpeedCtrlInterface>)))
+  "Returns md5sum for a message object of type '<PathSpeedCtrlInterface>"
+  "a552e8162979c20b671aaee207815dbe")
+(cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'PathSpeedCtrlInterface)))
+  "Returns md5sum for a message object of type 'PathSpeedCtrlInterface"
+  "a552e8162979c20b671aaee207815dbe")
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<PathSpeedCtrlInterface>)))
+  "Returns full string definition for message of type '<PathSpeedCtrlInterface>"
+  (cl:format cl:nil "float64  timestamp         # 数据帧时间戳~%float32  Target_velocity    # 车辆速度m/s~%float32  Target_steering_angle    # 车辆转角，方向盘转角 ~%uint8  Target_gear   # 01：驻车；02：空挡（N）；03：前进（D）；04：后退（R）；05：无效；~%uint8  Target_primary_gear   # 01：低速，02：中速；03：高速；~%uint8  Target_EngineSpeedLevel   # 01：低速；02：中速；03：高速；~%float32  Target_speedlever_percentage   #车速手柄（采棉机）开度（-1000-1000）   对应【-100%, 100%】，负数为后退，正数为前进。~%float32  Target_Torque_Nm   #目标驱动扭矩（单位：Nm，没有则给0）。~%uint8  Target_braking_percentage   #制动行程请求，最大行程点125，最小行程点为0，单位为个（当前将行程分成125个点）~%float32[] NearestPoint_Car2Path  # 反馈当前车辆位置距离规划的局部路径的最近点，包括：~%# float   longitude        # 途径点经度（东向坐标，单位为：m）~%# float   latitude         # 途径点纬度（北向坐标，单位为：m）~%# float   speed         # 途径点速度（单位：m/s）~%~%~%# add cyun 8.1~%int8 Cotton_Bin_Ctrl #棉线动作使能~%~%~%# add cyun 8.21~%float32 CTE~%float32 dHead~%~%# add cyun 8.30~%float32 brake_enable  #刹车使能~%float32 value_brake   #刹车量~%~%# add cyun 8.31~%float32[]  flag # 标志位，控制给线控，表明发送成功~%~%~%float32 raw_control # ~%~%~%float32 kappa #采棉时转弯，提采头的判断~%~%"))
+(cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'PathSpeedCtrlInterface)))
+  "Returns full string definition for message of type 'PathSpeedCtrlInterface"
+  (cl:format cl:nil "float64  timestamp         # 数据帧时间戳~%float32  Target_velocity    # 车辆速度m/s~%float32  Target_steering_angle    # 车辆转角，方向盘转角 ~%uint8  Target_gear   # 01：驻车；02：空挡（N）；03：前进（D）；04：后退（R）；05：无效；~%uint8  Target_primary_gear   # 01：低速，02：中速；03：高速；~%uint8  Target_EngineSpeedLevel   # 01：低速；02：中速；03：高速；~%float32  Target_speedlever_percentage   #车速手柄（采棉机）开度（-1000-1000）   对应【-100%, 100%】，负数为后退，正数为前进。~%float32  Target_Torque_Nm   #目标驱动扭矩（单位：Nm，没有则给0）。~%uint8  Target_braking_percentage   #制动行程请求，最大行程点125，最小行程点为0，单位为个（当前将行程分成125个点）~%float32[] NearestPoint_Car2Path  # 反馈当前车辆位置距离规划的局部路径的最近点，包括：~%# float   longitude        # 途径点经度（东向坐标，单位为：m）~%# float   latitude         # 途径点纬度（北向坐标，单位为：m）~%# float   speed         # 途径点速度（单位：m/s）~%~%~%# add cyun 8.1~%int8 Cotton_Bin_Ctrl #棉线动作使能~%~%~%# add cyun 8.21~%float32 CTE~%float32 dHead~%~%# add cyun 8.30~%float32 brake_enable  #刹车使能~%float32 value_brake   #刹车量~%~%# add cyun 8.31~%float32[]  flag # 标志位，控制给线控，表明发送成功~%~%~%float32 raw_control # ~%~%~%float32 kappa #采棉时转弯，提采头的判断~%~%"))
+(cl:defmethod roslisp-msg-protocol:serialization-length ((msg <PathSpeedCtrlInterface>))
+  (cl:+ 0
+     8
+     4
+     4
+     1
+     1
+     1
+     4
+     4
+     1
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'NearestPoint_Car2Path) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
+     1
+     4
+     4
+     4
+     4
+     4 (cl:reduce #'cl:+ (cl:slot-value msg 'flag) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ 4)))
+     4
+     4
+))
+(cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <PathSpeedCtrlInterface>))
+  "Converts a ROS message object to a list"
+  (cl:list 'PathSpeedCtrlInterface
+    (cl:cons ':timestamp (timestamp msg))
+    (cl:cons ':Target_velocity (Target_velocity msg))
+    (cl:cons ':Target_steering_angle (Target_steering_angle msg))
+    (cl:cons ':Target_gear (Target_gear msg))
+    (cl:cons ':Target_primary_gear (Target_primary_gear msg))
+    (cl:cons ':Target_EngineSpeedLevel (Target_EngineSpeedLevel msg))
+    (cl:cons ':Target_speedlever_percentage (Target_speedlever_percentage msg))
+    (cl:cons ':Target_Torque_Nm (Target_Torque_Nm msg))
+    (cl:cons ':Target_braking_percentage (Target_braking_percentage msg))
+    (cl:cons ':NearestPoint_Car2Path (NearestPoint_Car2Path msg))
+    (cl:cons ':Cotton_Bin_Ctrl (Cotton_Bin_Ctrl msg))
+    (cl:cons ':CTE (CTE msg))
+    (cl:cons ':dHead (dHead msg))
+    (cl:cons ':brake_enable (brake_enable msg))
+    (cl:cons ':value_brake (value_brake msg))
+    (cl:cons ':flag (flag msg))
+    (cl:cons ':raw_control (raw_control msg))
+    (cl:cons ':kappa (kappa msg))
+))

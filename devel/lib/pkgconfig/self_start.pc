@@ -1,0 +1,8 @@
+prefix=/home/nvidia/las/devel
+
+Name: self_start
+Description: Description of self_start
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

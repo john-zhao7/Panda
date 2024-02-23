@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="lidar" type="lidar" name="lidar" output="screen" /> 
+    <!-- <node pkg="lidar" type="Lidar_sub" name="Lidar_sub" output="screen"/> -->
+
+</launch>

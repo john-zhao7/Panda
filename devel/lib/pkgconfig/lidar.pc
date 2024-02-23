@@ -1,0 +1,8 @@
+prefix=/home/nvidia/las/devel
+
+Name: lidar
+Description: Description of lidar
+Version: 0.0.0
+Cflags: -I/home/nvidia/las/devel/include
+Libs: -L${prefix}/lib 
+Requires: std_msgs message_runtime message_generation roscpp rospy

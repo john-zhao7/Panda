@@ -1,0 +1,29 @@
+def control_system(speed_finalcontrol_m_s, host_v_act_m_s, lead_veh_distance):
+    # 初始化输出变量
+    target_dec_ms2 = 0
+    
+    # 第一个加法块的计算
+    delta_speed = speed_finalcontrol_m_s - host_v_act_m_s
+    
+    # 第一个饱和块，这里假设饱和上下限为0和-1
+    delta_speed_sat1 = max(min(2 * (speed_finalcontrol_m_s - host_v_act_m_s), 0), -1)
+    
+    # 第一个开关块
+    if delta_speed > 0:
+        switch_output1 = 0
+    else:
+        switch_output1 = delta_speed_sat1  # 或者其它您模型中定义的值
+    
+    # 第二个饱和块
+    delta_speed_sat2 = max(min(2 * (speed_finalcontrol_m_s - host_v_act_m_s), 0), -4)
+    
+    # 第二个开关块
+    if lead_veh_distance > 10:  # 假设10是您模型中定义的阈值
+        switch_output2 = 0
+    else:
+        switch_output2 = delta_speed_sat2  # 或者其它您模型中定义的值
+    
+    # 第二个加法块的计算
+    target_dec_ms2 = switch_output1 + switch_output2
+    
+    return target_dec_ms2

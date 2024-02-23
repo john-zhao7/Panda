@@ -1,0 +1,8 @@
+prefix=/home/nvidia/las/devel
+
+Name: faultdiagnosis
+Description: Description of faultdiagnosis
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

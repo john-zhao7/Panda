@@ -1,0 +1,28 @@
+
+(cl:in-package :asdf)
+
+(defsystem "hmi-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :std_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "CarActionInterface" :depends-on ("_package_CarActionInterface"))
+    (:file "_package_CarActionInterface" :depends-on ("_package"))
+    (:file "CarOriInterface" :depends-on ("_package_CarOriInterface"))
+    (:file "_package_CarOriInterface" :depends-on ("_package"))
+    (:file "FaultDiagnosisInterface" :depends-on ("_package_FaultDiagnosisInterface"))
+    (:file "_package_FaultDiagnosisInterface" :depends-on ("_package"))
+    (:file "GlobalPathPlanningInterface" :depends-on ("_package_GlobalPathPlanningInterface"))
+    (:file "_package_GlobalPathPlanningInterface" :depends-on ("_package"))
+    (:file "GpsImuInterface" :depends-on ("_package_GpsImuInterface"))
+    (:file "_package_GpsImuInterface" :depends-on ("_package"))
+    (:file "HmiStartEndPointInterface" :depends-on ("_package_HmiStartEndPointInterface"))
+    (:file "_package_HmiStartEndPointInterface" :depends-on ("_package"))
+    (:file "NodePointsInterface" :depends-on ("_package_NodePointsInterface"))
+    (:file "_package_NodePointsInterface" :depends-on ("_package"))
+    (:file "ParamOptimizeInterface" :depends-on ("_package_ParamOptimizeInterface"))
+    (:file "_package_ParamOptimizeInterface" :depends-on ("_package"))
+    (:file "PathSpeedCtrlInterface" :depends-on ("_package_PathSpeedCtrlInterface"))
+    (:file "_package_PathSpeedCtrlInterface" :depends-on ("_package"))
+    (:file "VehOperatingData" :depends-on ("_package_VehOperatingData"))
+    (:file "_package_VehOperatingData" :depends-on ("_package"))
+  ))

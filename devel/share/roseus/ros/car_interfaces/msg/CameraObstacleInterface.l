@@ -1,0 +1,195 @@
+;; Auto-generated. Do not edit!
+
+
+(when (boundp 'car_interfaces::CameraObstacleInterface)
+  (if (not (find-package "CAR_INTERFACES"))
+    (make-package "CAR_INTERFACES"))
+  (shadow 'CameraObstacleInterface (find-package "CAR_INTERFACES")))
+(unless (find-package "CAR_INTERFACES::CAMERAOBSTACLEINTERFACE")
+  (make-package "CAR_INTERFACES::CAMERAOBSTACLEINTERFACE"))
+
+(in-package "ROS")
+;;//! \htmlinclude CameraObstacleInterface.msg.html
+(if (not (find-package "SENSOR_MSGS"))
+  (ros::roseus-add-msgs "sensor_msgs"))
+
+
+(defclass car_interfaces::CameraObstacleInterface
+  :super ros::object
+  :slots (_timestamp _id _number _obstacledata _resultimage _process_time ))
+
+(defmethod car_interfaces::CameraObstacleInterface
+  (:init
+   (&key
+    ((:timestamp __timestamp) 0.0)
+    ((:id __id) 0)
+    ((:number __number) 0)
+    ((:obstacledata __obstacledata) (make-array 0 :initial-element 0.0 :element-type :float))
+    ((:resultimage __resultimage) (instance sensor_msgs::Image :init))
+    ((:process_time __process_time) 0.0)
+    )
+   (send-super :init)
+   (setq _timestamp (float __timestamp))
+   (setq _id (round __id))
+   (setq _number (round __number))
+   (setq _obstacledata __obstacledata)
+   (setq _resultimage __resultimage)
+   (setq _process_time (float __process_time))
+   self)
+  (:timestamp
+   (&optional __timestamp)
+   (if __timestamp (setq _timestamp __timestamp)) _timestamp)
+  (:id
+   (&optional __id)
+   (if __id (setq _id __id)) _id)
+  (:number
+   (&optional __number)
+   (if __number (setq _number __number)) _number)
+  (:obstacledata
+   (&optional __obstacledata)
+   (if __obstacledata (setq _obstacledata __obstacledata)) _obstacledata)
+  (:resultimage
+   (&rest __resultimage)
+   (if (keywordp (car __resultimage))
+       (send* _resultimage __resultimage)
+     (progn
+       (if __resultimage (setq _resultimage (car __resultimage)))
+       _resultimage)))
+  (:process_time
+   (&optional __process_time)
+   (if __process_time (setq _process_time __process_time)) _process_time)
+  (:serialization-length
+   ()
+   (+
+    ;; float64 _timestamp
+    8
+    ;; uint8 _id
+    1
+    ;; uint16 _number
+    2
+    ;; float32[] _obstacledata
+    (* 4    (length _obstacledata)) 4
+    ;; sensor_msgs/Image _resultimage
+    (send _resultimage :serialization-length)
+    ;; float32 _process_time
+    4
+    ))
+  (:serialize
+   (&optional strm)
+   (let ((s (if strm strm
+              (make-string-output-stream (send self :serialization-length)))))
+     ;; float64 _timestamp
+       (sys::poke _timestamp (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; uint8 _id
+       (write-byte _id s)
+     ;; uint16 _number
+       (write-word _number s)
+     ;; float32[] _obstacledata
+     (write-long (length _obstacledata) s)
+     (dotimes (i (length _obstacledata))
+       (sys::poke (elt _obstacledata i) (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+       )
+     ;; sensor_msgs/Image _resultimage
+       (send _resultimage :serialize s)
+     ;; float32 _process_time
+       (sys::poke _process_time (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;;
+     (if (null strm) (get-output-stream-string s))))
+  (:deserialize
+   (buf &optional (ptr- 0))
+   ;; float64 _timestamp
+     (setq _timestamp (sys::peek buf ptr- :double)) (incf ptr- 8)
+   ;; uint8 _id
+     (setq _id (sys::peek buf ptr- :char)) (incf ptr- 1)
+   ;; uint16 _number
+     (setq _number (sys::peek buf ptr- :short)) (incf ptr- 2)
+   ;; float32[] _obstacledata
+   (let (n)
+     (setq n (sys::peek buf ptr- :integer)) (incf ptr- 4)
+     (setq _obstacledata (instantiate float-vector n))
+     (dotimes (i n)
+     (setf (elt _obstacledata i) (sys::peek buf ptr- :float)) (incf ptr- 4)
+     ))
+   ;; sensor_msgs/Image _resultimage
+     (send _resultimage :deserialize buf ptr-) (incf ptr- (send _resultimage :serialization-length))
+   ;; float32 _process_time
+     (setq _process_time (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;;
+   self)
+  )
+
+(setf (get car_interfaces::CameraObstacleInterface :md5sum-) "454b71629ff68db2d3a44afe4cb25c2a")
+(setf (get car_interfaces::CameraObstacleInterface :datatype-) "car_interfaces/CameraObstacleInterface")
+(setf (get car_interfaces::CameraObstacleInterface :definition-)
+      "float64  timestamp  #时间戳
+uint8  id  # 摄像机ID
+uint16  number  # 障碍物数量
+float32[]  obstacledata  #障碍物数据
+sensor_msgs/Image  resultimage     # 障碍物检测结果图像
+float32  process_time    # 进程处理时间
+
+
+# 其中obstacledata格式float32[]为一维数组，储存按照[category ,length ,width ,height , x  ,y  ,z  ,v  ,latv ,category  ,length ,width ,height , x ,y ,z ,v ,latv ,……]存储，9个长度数据为一组
+# int  category     # 障碍物类别， 0点目标；1小汽车；2卡车/客车；3行人；4摩托车/电动车；5自行车；6宽大目标（如墙面）；7reserved保留； 8traffic light； 9stop sign
+# float  length       # 障碍物长度m，精度为0.01
+# float  width       # 障碍物宽度m，精度为0.01
+# float  height       # 障碍物高度m，精度为0.01
+# float  x     # 障碍物的x坐标[米]，精度为0.01
+# float  y   # 障碍物的y坐标[米]，精度为0.01
+# float  z    # 障碍物的z坐标[米]，精度为0.01
+# float  v=0    # 障碍物径向速度m/s，精度为0.01
+# float  latv=0  # 障碍物的横向速度m/s，精度为0.01
+
+================================================================================
+MSG: sensor_msgs/Image
+# This message contains an uncompressed image
+# (0, 0) is at top-left corner of image
+#
+
+Header header        # Header timestamp should be acquisition time of image
+                     # Header frame_id should be optical frame of camera
+                     # origin of frame should be optical center of camera
+                     # +x should point to the right in the image
+                     # +y should point down in the image
+                     # +z should point into to plane of the image
+                     # If the frame_id here and the frame_id of the CameraInfo
+                     # message associated with the image conflict
+                     # the behavior is undefined
+
+uint32 height         # image height, that is, number of rows
+uint32 width          # image width, that is, number of columns
+
+# The legal values for encoding are in file src/image_encodings.cpp
+# If you want to standardize a new string format, join
+# ros-users@lists.sourceforge.net and send an email proposing a new encoding.
+
+string encoding       # Encoding of pixels -- channel meaning, ordering, size
+                      # taken from the list of strings in include/sensor_msgs/image_encodings.h
+
+uint8 is_bigendian    # is this data bigendian?
+uint32 step           # Full row length in bytes
+uint8[] data          # actual matrix data, size is (step * rows)
+
+================================================================================
+MSG: std_msgs/Header
+# Standard metadata for higher-level stamped data types.
+# This is generally used to communicate timestamped data 
+# in a particular coordinate frame.
+# 
+# sequence ID: consecutively increasing ID 
+uint32 seq
+#Two-integer timestamp that is expressed as:
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')
+# time-handling sugar is provided by the client library
+time stamp
+#Frame this data is associated with
+string frame_id
+
+")
+
+
+
+(provide :car_interfaces/CameraObstacleInterface "454b71629ff68db2d3a44afe4cb25c2a")
+
+

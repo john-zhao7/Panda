@@ -1,0 +1,2 @@
+set(hmi_MESSAGE_FILES "/home/nvidia/las/src/hmi/msg/GlobalPathPlanningInterface.msg;/home/nvidia/las/src/hmi/msg/GpsImuInterface.msg;/home/nvidia/las/src/hmi/msg/HmiStartEndPointInterface.msg;/home/nvidia/las/src/hmi/msg/FaultDiagnosisInterface.msg;/home/nvidia/las/src/hmi/msg/PathSpeedCtrlInterface.msg;/home/nvidia/las/src/hmi/msg/CarOriInterface.msg;/home/nvidia/las/src/hmi/msg/NodePointsInterface.msg")
+set(hmi_SERVICE_FILES "")

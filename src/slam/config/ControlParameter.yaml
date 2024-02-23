@@ -1,0 +1,24 @@
+CTE_Kp: 80
+CTE_Kd: 100
+Head_Kp: 28
+Head_Kd: 2
+Speed_Kp: 100
+Speed_Kd: 10
+Height: 3.975
+Length: 9.105
+MaxSpeed: 15
+Maximum_climbing_grade: 32
+Minimum_ground_clearance: 0.305
+Minimum_turning_radius: 11
+Vehicle_model: TLI90A
+Weight: 31.47
+WheelBase: 5.625
+curb_weight: 3000
+TargetSpeed: 1
+Kv: 0.5
+# Kv: 1
+K_kappa: 2
+i_sw: 25
+perception_mark : 12
+count_time : 120000
+Gain_SteerAngle2WheelAnlge: -25
